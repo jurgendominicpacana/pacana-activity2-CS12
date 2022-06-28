@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PACAÑA-Landing Page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><img src="images/every.png" alt=""></a>
+		<div class="toggle"><img src="images/toggle.png"></div>
+	</header>
+	<div class="banner">
+		<div class="content">
+			<h2>When an <span>interdimensional rupture</span></h2>
+			<p>
+				 Unravels reality, an unlikely hero must channel her newfound powers to fight bizarre and bewildering dangers from the multiverse as the fate of the world hangs in the balance.
+			</p>
+			<a href="#" class="play" onclick="toggle();"><img src="images/play.png">Watch <br>Trailer</a>
+			<div class="slide"></div>
+			<ul class="sci">
+				<li><a href="https://www.facebook.com/everythingeverywheremovie/" target="_blank"><img src="images/fbbw.png" alt="" width="50px" height="50px"></a></li>
+
+				<li><a href="https://www.rottentomatoes.com/m/everything_everywhere_all_at_once" target="_blank"><img src="images/rotbw.png" alt="" width="50px" height="50px"></a></li>
+
+				<li><a href="https://www.imdb.com/title/tt6710474/" target="_blank"><img src="images/imdbbw.png" alt="" width="75px" height="50px"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="trailer">
+		<video src="images/trailer.mp4" controls="true"></video>
+		<img src="images/close.png" alt="" class="close" onclick="toggle();">
+	</div>
+	<script type="text/javascript">
+		function toggle(){
+			var trailer = document.querySelector('.trailer');
+			var video = document.querySelector('video');
+			trailer.classList.toggle('active');
+			video.currentTime = 0;
+			video.pause();
+		}
+	</script>
+</body>
+</html>
